@@ -19,6 +19,11 @@ pipeline {
                 echo 'Hello, Maven'
             }
         }
+		stage('Example Test') {
+            steps {
+                intput("Do you want to continue?")
+            }
+        }
         stage('Example Test') {
             steps {
                 echo 'Hello, JDK'
