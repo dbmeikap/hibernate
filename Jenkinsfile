@@ -16,9 +16,8 @@ pipeline {
     stages {
         stage('Example Build') {
             steps {
-				def rootDir = pwd()
                 echo 'Hello, Maven'
-				echo '${rootDir}'
+				echo "Workspace dir is ${pwd()}"
             }
         }
 		stage('Example') {
