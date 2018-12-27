@@ -16,7 +16,8 @@ pipeline {
     stages {
 		stage('Load') {
             steps {
-				def hello = load 'hello.groovy'
+				load 'hello.groovy'
+				echo 'File loaded!!'
             }
         }
         stage('Example Build') {
