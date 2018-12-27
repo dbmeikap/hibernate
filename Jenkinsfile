@@ -16,7 +16,7 @@ pipeline {
     stages {
 		stage('Load') {
             steps {
-				load 'hello.groovy'
+				common = load 'hello.groovy'
 				echo 'File loaded!!'
             }
         }
