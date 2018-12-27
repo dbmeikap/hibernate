@@ -9,6 +9,7 @@ pipeline {
         stage("foo") {
             steps {
                 echo "Workspace dir is ${pwd()}"
+				echo "Branch Name: ${env.BRANCH_NAME}"
             }
         }
     }
