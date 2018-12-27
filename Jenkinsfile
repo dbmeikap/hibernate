@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Hello, Maven'
 				echo "Workspace dir is ${pwd()}"
-				def example = load(pwd() + "/hello.groovy")
+				def example = load "hello.groovy"
             }
         }
 		stage('Example') {
