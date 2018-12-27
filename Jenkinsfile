@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Hello, Maven'
 				echo "Workspace dir is ${pwd()}"
-				def example = load "hello.groovy"
+				//def example = load "hello.groovy"
             }
         }
 		stage('Example') {
@@ -54,5 +54,8 @@ pipeline {
         always { 
             echo 'I will always say Hello again!'
         }
+		success {
+			cleanWs cleanWhenFailure: false
+		}
     }
 }
