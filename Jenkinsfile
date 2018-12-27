@@ -16,7 +16,7 @@ pipeline {
     stages {
 		stage('Load') {
             steps {
-				load 'hello.groovy'
+				def hello = load 'hello.groovy'
             }
         }
         stage('Example Build') {
