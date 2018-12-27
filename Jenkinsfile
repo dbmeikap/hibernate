@@ -14,11 +14,15 @@ pipeline {
         file(name: "FILE", description: "Choose a file to upload")
     }
     stages {
+		stage('Load') {
+            steps {
+				load 'hello.groovy'
+            }
+        }
         stage('Example Build') {
             steps {
                 echo 'Hello, Maven'
 				echo "Workspace dir is ${pwd()}"
-				def example = load 'hello.groovy'
             }
         }
 		stage('Example') {
